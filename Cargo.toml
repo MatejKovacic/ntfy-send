@@ -1,0 +1,19 @@
+[package]
+name = "ntfy-send"
+version = "0.1.0"
+authors = [
+    "Matej Kovacic <matej.kovacic@telefoncek.si>",
+    "Deepseek",
+]
+description = "Fail safe Ntfy notifier for TP-Link M7350 device"
+license = "GPL v3.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.11", default-features = false, features = ["json", "blocking", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = "0.4"
+clap = { version = "4.0", features = ["derive"] }
+log = "0.4"
+simple_logger = "4.0"
